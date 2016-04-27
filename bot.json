@@ -1,8 +1,52 @@
 [{
   "default_cmd": "npm start",
-  "default_path": ".\/node_modules\/__package_name__",
+  "default_path": ".\/node_modules\/subprompts\-bot",
   "default_settings": [
-   {
+    { "name": "MENU_CHOICES",
+      "value": "MENU_CHOICES",
+      "type": "text"
+    },
+    { "name": "MENU_PROMPT",
+      "value": "MENU_PROMPT",
+      "type": "text"
+    },
+    { "name": "CONFIRM_CONTACT",
+      "value": "CONFIRM_CONTACT",
+      "type": "text"
+    },
+    { "name": "WHO_TO_ASK_FOR",
+      "value": "WHO_TO_ASK_FOR",
+      "type": "text"
+    },
+    { "name": "PREFER_ALTERNATE_CONTACT",
+      "value": "PREFER_ALTERNATE_CONTACT",
+      "type": "text"
+    },
+    { "name": "ALTERNATE_CONTACT_COLLECTION",
+      "value": "ALTERNATE_CONTACT_COLLECTION",
+      "type": "text"
+    },
+    { "name": "DONT_CONTACT_PROMPT",
+      "value": "DONT_CONTACT_PROMPT",
+      "type": "text"
+    },
+    { "name": "FIRST_CHOICE",
+      "value": "FIRST_CHOICE",
+      "type": "text"
+    },
+    { "name": "SECOND_CHOICE",
+      "value": "SECOND_CHOICE",
+      "type": "text"
+    },
+    { "name": "THIRD_CHOICE",
+      "value": "THIRD_CHOICE",
+      "type": "text"
+    },
+    { "name": "FOURTH_CHOICE",
+      "value": "FOURTH_CHOICE",
+      "type": "text"
+    },
+    {
       "name": "PROMPT_1",
       "value": "Change me to change prompt 1",
       "type": "text"
@@ -18,10 +62,10 @@
       "type": "text"
     }
   ],
-  "desc": "__description__",
+  "desc": "Multiple choice single response bot",
   "icon_class": "information",
-  "name": "__package_name__"
+  "name": "subprompts\-bot"
   "owner_cmd": "",
-  "short_desc": "__description__",
-  "repo_link": "__git_repo_url__"
+  "short_desc": "Multiple choice single response bot",
+  "repo_link": "https:\/\/github.com\/green\-bot\/subprompts\-bot"
 }]

@@ -1,27 +1,45 @@
 #!/usr/bin/env ruby
+# The basic usage script from https://github.com/JEG2/highline.git
 #
-#
-PROMPT_1 = ENV['PROMPT_1'] || 'Default prompt 1'
-PROMPT_2 = ENV['PROMPT_2'] || 'Default prompt 2'
-PROMPT_3 = ENV['PROMPT_3'] || 'Default prompt 3'
-SIGNATURE = ENV['SIGNATURE'] || 'Default signature prompt'
+require './lib/greenbot.rb'
 
+tell ENV['PROMPT_1']
+tell ENV['PROMPT_2']
+begin
+  tasks = ENV['MENU_CHOICES'].split(',').map(&:strip)
+  tasks << 'quit'
+  tasks << 'contactme'
+  my_task = select(ENV['MENU_PROMPT'], tasks).downcase
 
-require "./lib/greenbot.rb"
-tell PROMPT_1
-issue = note(PROMPT_2)
-if confirm("Would you like someone to contact you?")
-  contact_me = true
-  contact_me.remember("contact_me")
-  name = ask("When we call, who should we ask for?")
-  name.remember("who_to_ask_for")
-  if confirm("Is there another number we should try?")
-    better_number = ask("Please enter that number with an area code")
-    better_number.remember("better_number")
+  case my_task
+  when 'contactme'
+    if confirm(ENV['CONFIRM_CONTACT'])
+      contact_me = true
+      contact_me.remember('contact_me')
+      name = ask(ENV['WHO_TO_ASK_FOR'])
+      name.remember('who_to_ask_for')
+      if confirm(ENV['PREFER_ALTERNATE_CONTACT'])
+        better_number = ask(ENV['ALTERNATE_CONTACT_COLLECTION'])
+        better_number.remember('better_number')
+      end
+    else
+      tell(ENV['DONT_CONTACT_PROMPT'])
+      contact_me = false
+      contact_me.remember('contact_me')
+    end
+  when 'quit'
+    break
+  else
+    case tasks.map(&:downcase).index(my_task)
+    when 0
+      tell ENV['FIRST_CHOICE']
+    when 1
+      tell ENV['SECOND_CHOICE']
+    when 2
+      tell ENV['THIRD_CHOICE']
+    when 3
+      tell ENV['FOURTH_CHOICE']
+    end
   end
-else
-  tell("No problem at all.")
-end
-tell PROMPT_3
-tell SIGNATURE
-
+end while true
+tell ENV['SIGNATURE']
