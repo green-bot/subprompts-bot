@@ -1,5 +1,5 @@
 {
-  "name": "subprompts\-bot",
+  "name": "subprompts-bot",
   "description":"Multiple choice single response bot",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https:\/\/github.com\/green\-bot\/subprompts\-bot"
+    "url": "https://github.com/green-bot/subprompts-bot"
   },
   "keywords": [
     "green-bot",

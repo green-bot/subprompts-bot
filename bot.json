@@ -1,6 +1,6 @@
 [{
   "default_cmd": "npm start",
-  "default_path": ".\/node_modules\/subprompts\-bot",
+  "default_path": "./node_modules/subprompts-bot",
   "default_settings": [
     { "name": "MENU_CHOICES",
       "value": "MENU_CHOICES",
@@ -64,8 +64,8 @@
   ],
   "desc": "Multiple choice single response bot",
   "icon_class": "information",
-  "name": "subprompts\-bot"
+  "name": "subprompts-bot",
   "owner_cmd": "",
   "short_desc": "Multiple choice single response bot",
-  "repo_link": "https:\/\/github.com\/green\-bot\/subprompts\-bot"
+  "repo_link": "https://github.com/green-bot/subprompts-bot"
 }]
