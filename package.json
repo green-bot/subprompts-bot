@@ -1,6 +1,6 @@
 {
   "name": "subprompts-bot",
-  "description":"Multiple choice single response bot",
+  "description": "Multiple choice single response bot",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "bundle exec ruby bot.rb",
@@ -18,5 +18,5 @@
   ],
   "author": "Pavlo Sirous",
   "license": "MIT",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
