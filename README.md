@@ -19,6 +19,16 @@
 
 The basic usage script from https://github.com/JEG2/highline.git
 
+# Introduction
+This bot is responsible for handling a short information conversation
+with up to four choices.
+
+# Installation
+cd to greeenbot-core
+npm install subprompts-bot
+
+# Issues
+* We only support four choices
 
 
   
@@ -26,8 +36,26 @@ The basic usage script from https://github.com/JEG2/highline.git
 ```
 require './lib/greenbot.rb'
 
+
+```
+
+
+
+
+
+
+
+When the script starts, send out the first two prompts to the inbound
+messager
+
+
+
+  
+
+```
 tell ENV['PROMPT_1']
 tell ENV['PROMPT_2']
+
 begin
   tasks = ENV['MENU_CHOICES'].split(',').map(&:strip)
   tasks << 'quit'

@@ -42,13 +42,38 @@
                 <a class="pilcrow" href="#section-2">&#182;</a>
               </div>
               <p>The basic usage script from <a href="https://github.com/JEG2/highline.git">https://github.com/JEG2/highline.git</a></p>
+<h1 id="introduction">Introduction</h1>
+<p>This bot is responsible for handling a short information conversation
+with up to four choices.</p>
+<h1 id="installation">Installation</h1>
+<p>cd to greeenbot-core
+npm install subprompts-bot</p>
+<h1 id="issues">Issues</h1>
+<ul>
+<li>We only support four choices</li>
+</ul>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">require</span> <span class="hljs-string">'./lib/greenbot.rb'</span>
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">require</span> <span class="hljs-string">'./lib/greenbot.rb'</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>When the script starts, send out the first two prompts to the inbound
+messager</p>
 
-tell ENV[<span class="hljs-string">'PROMPT_1'</span>]
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>tell ENV[<span class="hljs-string">'PROMPT_1'</span>]
 tell ENV[<span class="hljs-string">'PROMPT_2'</span>]
+
 <span class="hljs-keyword">begin</span>
   tasks = ENV[<span class="hljs-string">'MENU_CHOICES'</span>].split(<span class="hljs-string">','</span>).map(&amp;<span class="hljs-symbol">:strip</span>)
   tasks &lt;&lt; <span class="hljs-string">'quit'</span>
